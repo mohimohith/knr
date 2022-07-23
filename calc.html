@@ -1,0 +1,182 @@
+<html>
+<head>
+	<script>
+		//function that display value
+		function dis(val)
+		{
+			document.getElementById("result").value+=val
+		}
+		
+		//function that evaluates the digit and return result
+		function solve()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = y
+		}
+		
+		//function that clear the display
+		function clr()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+	<!-- for styling -->
+	<style>
+		.title{
+		margin-bottom: 10px;
+		text-align:center;
+		width: 100%;
+		color:rgb(243, 72, 231);
+		border: solid black 2px;
+        height:15vh;
+        font-weight:bold;
+        font-size:50px;
+		}
+        .navigation{
+            background-color: rgb(232, 167, 45);
+            height:10vh;
+        }
+        .opt{
+            margin-left: 14px;
+            margin-right: 10px;
+            list-style:none;
+        }
+        .heading{
+            color:aliceblue;
+            
+        }
+        .heaer{
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        .opt.active{
+            border:3px solid rgb(251, 250, 250);
+            border-radius: 8px;
+        
+        }
+        .opt:hover{
+            border:3px solid rgb(251, 250, 250);
+            border-radius: 5px;
+        }
+        .navs{
+            margin-top:16px;
+        }
+		input[type="text"]
+		{
+		background-color:white;
+		border: solid black 2px;
+		width:100%
+        
+		}
+        .coll{
+            height: 14vh;
+            background-color:rgb(30, 224, 192);
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .btn{
+            transform:translate(-50%,-50%) scale(0.9);
+            top:50%;
+            left:50%;
+        }
+        #result{
+            height: 90px;
+            font-size:45px;
+
+        }
+        .head1{
+         margin-left: 20px;
+            text-shadow:5px 5px 10px black ;
+            color:rgb(255, 255, 255);
+        }
+	</style>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+<!-- create table -->
+<body>
+    <div class="navigation" style="position: sticky; top:0; z-index:100;">
+        <div class="title" style="display:flex">
+          <p class="head1 h1 heading">KNR-carving's</p>
+            <label id="icon" style="margin-left:auto;">
+            <button onclick="nav()" class="tog">click</button>
+          </label> 
+          
+        </div>
+        
+        <div class="navi">
+            <ul class="navs">
+             <li class=""><a href="new.html" class="opt active" >Home</a></li>
+             <li class=""><a href="Design.html" class="opt">Designs</a></li>
+             <li class=""><a href="calc.html" class="opt">Caluclator</a></li>
+             <li class=""><a href="bill.html" class="opt">Bill</a></li>
+             <li class=""><a href="contact.html" class="opt">Contact</a></li>
+            </ul>
+           
+        </div>
+        </div>
+	<div class = "title" style="color: rgb(240, 62, 26);" >Knr Carvings</div>
+    <div class="row">
+        <div class="col-md-9 coll"><input size="55" type="text" id="result"/></div>
+        <div class="col-md-3 coll justify-content-center" onclick="clr()" value="c"><h1 style="padding:25px; margin-left:90px">c</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 coll justify-content-center" onclick="dis('1')" value="1"><h1 style="padding:25px; margin-left:90px">1</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('2')" value="2"><h1 style="padding:25px; margin-left:90px">2</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('3')" value="3"><h1 style="padding:25px; margin-left:90px">3</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('/')" value="/"><h1 style="padding:25px; margin-left:90px">/</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 coll justify-content-center" onclick="dis('4')" value="4"><h1 style="padding:25px; margin-left:90px">4</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('5')" value="5"><h1 style="padding:25px; margin-left:90px">5</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('6')" value="6"><h1 style="padding:25px; margin-left:90px">6</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('-')" value="-"><h1 style="padding:25px; margin-left:90px">-</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 coll justify-content-center" onclick="dis('7')" value="7"><h1 style="padding:25px; margin-left:90px">7</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('8')" value="8"><h1 style="padding:25px; margin-left:90px">8</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('9')" value="9"><h1 style="padding:25px; margin-left:90px">9</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('+')" value="+"><h1 style="padding:25px; margin-left:90px">+</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 coll justify-content-center" onclick="dis('.')" value="."><h1 style="padding:25px; margin-left:90px">.</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('0')" value="0"><h1 style="padding:25px; margin-left:90px">0</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="solve()" value=""><h1 style="padding:25px; margin-left:90px">=</h1></div>
+        <div class="col-md-3 coll justify-content-center" onclick="dis('*')" value="*"><h1 style="padding:25px; margin-left:90px">*</h1></div>
+    </div>
+	<!-- <table style="height: 90vh; width:100%;" id="table2">
+		<tr>
+			<td colspan="3"><input type="text" id="result"/></td>
+	
+			<td><input type="button" value="c" onclick="clr()"/> </td>
+		</tr>
+		<tr>
+	
+			<td><input type="button" value="1" onclick="dis('1')"/> </td>
+			<td><input type="button" value="2" onclick="dis('2')"/> </td>
+			<td><input type="button" value="3" onclick="dis('3')"/> </td>
+			<td><input type="button" value="/" onclick="dis('/')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="dis('4')"/> </td>
+			<td><input type="button" value="5" onclick="dis('5')"/> </td>
+			<td><input type="button" value="6" onclick="dis('6')"/> </td>
+			<td><input type="button" value="-" onclick="dis('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="dis('7')"/> </td>
+			<td><input type="button" value="8" onclick="dis('8')"/> </td>
+			<td><input type="button" value="9" onclick="dis('9')"/> </td>
+			<td><input type="button" value="+" onclick="dis('+')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." onclick="dis('.')"/> </td>
+			<td><input type="button" value="0" onclick="dis('0')"/> </td>
+			<td><input type="button" value="=" onclick="solve()"/> </td>
+			<td><input type="button" value="*" onclick="dis('*')"/> </td>
+		</tr>
+	</table>  -->
+
+</body>
+</html>
