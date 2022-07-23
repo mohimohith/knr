@@ -9,7 +9,9 @@
     height:10vh;
     display:flex;
 }
-
+.title{
+width:100%;
+}
 .head1{
     margin-top: 10px;
     text-shadow:5px 5px 10px black ;
