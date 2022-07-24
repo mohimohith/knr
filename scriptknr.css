@@ -126,7 +126,7 @@ margin-bottom:30px;
     border-radius: 25px;
    
 }
-@media (max-width:909px){
+@media (max-width:1024px){
     .navs{
         position:fixed;
         width:100%;
